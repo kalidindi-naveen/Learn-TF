@@ -21,8 +21,16 @@ terraform destroy -var-file="dev/dev.tfvars" -auto-approve
 
 terraform workspace
 -------------------
+terraform init
 terraform workspace list
 terraform workspace new dev  #Created and switched to workspace "dev"!
 terraform workspace new prod #Created and switched to workspace "prod"!
+
+it will automatically create folder based on environment
+env:/
+  dev/
+    step-into-iot-workspace-cloud
+  prod/
+    step-into-iot-workspace-cloud
 
 terraform workspace select dev
