@@ -10,6 +10,6 @@ resource "aws_instance" "this" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -i IP.txt -e ansible_user=ec2-user -e ansible_password=DevOps321 web.yml"
+    command = "ansible-playbook web.yml"
   }
 }
