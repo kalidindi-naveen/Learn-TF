@@ -1,12 +1,12 @@
 Create Multiple Environment
 ----------------------------
-using tfvars
+- using tfvars
   we can override default values
   code is same -- different set of variables for each Environment (DEV, QA, STAGE, PRE-PROD, PROD)
-using terraform workspace
+- using terraform workspace
 
-
-
+tfvars
+------
 terraform init -backend-config=dev/backend.tf
 terraform plan -var-file="dev/dev.tfvars"
 terraform apply -var-file="dev/dev.tfvars" -auto-approve
@@ -18,3 +18,11 @@ terraform destroy -var-file="prod/prod.tfvars" -auto-approve
 
 terraform init -reconfigure -backend-config=dev/backend.tf
 terraform destroy -var-file="dev/dev.tfvars" -auto-approve
+
+terraform workspace
+-------------------
+terraform workspace list
+terraform workspace new dev  #Created and switched to workspace "dev"!
+terraform workspace new prod #Created and switched to workspace "prod"!
+
+terraform workspace select dev
