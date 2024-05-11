@@ -2,3 +2,18 @@ terraform init -- terraform will check for providers. It will download AWS provi
 terraform plan -- validates syntax, if correct then it will show the resource it will create.
 terraform apply -auto-approve -- creates infra
 terraform destroy -auto-approve -- destroys infra
+
+we cant create functions in terraform but we can use inbuild functions
+
+terraform console
+> max(1,2,3)
+3
+
+> join("-",["Hi","NK"])
+"Hi-NK"
+
+> split("-","Hi-NK")
+tolist([
+  "Hi",
+  "NK",
+])
