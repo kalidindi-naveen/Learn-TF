@@ -44,3 +44,8 @@ step-into-iot.doc, step-into-iot.doc.lock(1kb)
 Remote state management
 -----------------------
 store state file in s3 bucket, gcs bucket,... etc 
+
+Note::- 
+-------
+list -- count
+map -- for each
