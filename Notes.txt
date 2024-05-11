@@ -1,0 +1,4 @@
+terraform init -- terraform will check for providers. It will download AWS providers, plugins, backend configuration,..etc
+terraform plan -- validates syntax, if correct then it will show the resource it will create.
+terraform apply -auto-approve -- creates infra
+terraform destroy -auto-approve -- destroys infra
