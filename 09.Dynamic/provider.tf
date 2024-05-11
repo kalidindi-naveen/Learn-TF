@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "lambda-test-s3-mcd-bkt"
-    key            = "remote-state-for-each"
+    key            = "remote-state-dynamic"
     region         = "us-east-1"
     dynamodb_table = "s3-remote-table"
   }
