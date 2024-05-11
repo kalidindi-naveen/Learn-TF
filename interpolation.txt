@@ -1,0 +1,13 @@
+interpolation (combine string and variable)
+-------------------------------------------
+
+variable "greeting" {
+	default = "morning"
+}
+
+
+Ansible::- "Hello {{greeting}}" -- interpolation
+
+"Hello var.greeting" -- Not Work
+
+Terraform::- "Hello ${var.greeting}" -- interpolation

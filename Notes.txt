@@ -17,3 +17,8 @@ tolist([
   "Hi",
   "NK",
 ])
+
+
+locals and variables are same, referring key value pairs
+locals can hold expressions and use it wherever you want. 
+You can use variables inside locals. but you can't use other variables/locals inside variables
