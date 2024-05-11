@@ -1,0 +1,16 @@
+provisioners
+------------
+terraform we are creating instances....
+
+1. local-exec -- where you are running terraform command i.e local
+2. remote-exec -- inside remote machine (execute inside ec2 created by terraform)
+
+
+ip address into a file using local-exec
+
+Execute Playbook to Install Nginx
+---------------------------------
+ansible-playbook -i IP.txt web.yaml
+
+provisioners will run when you are creating resources
+They will not run once the resources are created
