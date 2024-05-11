@@ -1,0 +1,12 @@
+Achieves same desired state whether executed 1 or more time
+
+Ansible is Idempotent.
+Terraform is Idempotent.
+Shell Scripting is not Idempotent.
+
+Idempotence is a property of an operation that ensures that, if the operation is repeated once or more than once, you get the same result. Apply it once or more and the outcome's the same
+--OR--
+Idempotent means ensuring that running the script multiple times has the same effect as running it just once.
+
+Imagine you have a script that installs a program. If the program is already installed, running the script again shouldn't reinstall it. 
+Similarly, if the script creates a directory, running it again shouldn't create another directory or throw an error.
