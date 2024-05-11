@@ -34,3 +34,19 @@ env:/
     step-into-iot-workspace-cloud
 
 terraform workspace select dev
+terraform plan 
+terraform apply -auto-approve
+
+terraform workspace select prod
+terraform plan 
+terraform apply -auto-approve
+
+workspace
+---------
+adv --> less code
+dis --> should be more careful while dealing with variables and tfvars. chance of doing something wrong in prod.
+
+separate repos
+--------------
+adv -- clear separation of environments
+dis -- duplication of code
