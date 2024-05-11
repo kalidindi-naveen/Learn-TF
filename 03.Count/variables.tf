@@ -4,23 +4,14 @@ variable "image_id" {
   description = "RHEL-9 AMI ID"         #optional
 }
 
-variable "instance_name" {
-  type    = string
-  default = "db"
+variable "instance_names" {
+  type    = list(string)
+  default = ["db", "fe", "be"]
 }
 
 variable "instance_type" {
   default = "t3.micro"
   type    = string
-}
-
-variable "tags" {
-  default = {
-    Project     = "Expense"
-    Environment = "Dev"
-    Module      = "DB"
-    Name        = "DB"
-  }
 }
 
 variable "sg_name" {

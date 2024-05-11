@@ -1,10 +1,13 @@
 resource "aws_instance" "db" {
-  count                  = 3
+  # count                  = 3 # it will create all instances with same name
+  count                  = length(var.instance_names)
   ami                    = var.image_id
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-  instance_type          = var.instance_name == "db" ? "t3.small" : "t3.micro"
+  instance_type          = var.instance_type
   # left side things are called as arguements, right side are values.
-  tags = var.tags
+  tags = {
+    Name = var.instance_names[count.index]
+  }
 }
 
 resource "aws_security_group" "allow_ssh" {
