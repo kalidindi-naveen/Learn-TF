@@ -10,11 +10,11 @@ variable "instance_names" {
 }
 
 variable "common_tags" {
-  type = map
-  default={
-    Project = "Expense"
+  type = map(any)
+  default = {
+    Project     = "Expense"
     Environment = "Dev"
-    Terraform = "true"
+    Terraform   = "true"
   }
 }
 
@@ -42,4 +42,13 @@ variable "protocol" {
 variable "allowed_cidr" {
   type    = list(string)
   default = ["0.0.0.0/0"]
+}
+
+#r53 variables
+variable "zone_id" {
+  default = "Z0363750E04SVYISPQAR"
+}
+
+variable "domain_name" {
+  default = "step-into-iot.cloud"
 }
