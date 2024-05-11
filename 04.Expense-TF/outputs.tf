@@ -3,5 +3,5 @@ output "instance_info" {
 }
 
 output "public_ip" {
-  value = aws_instance.expense.public_ip
+  value = aws_instance.expense[*].public_ip
 }
