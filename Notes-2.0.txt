@@ -1,0 +1,11 @@
+Create Multiple Environment
+----------------------------
+using tfvars
+  we can override default values
+  code is same -- different set of variables for each Environment (DEV, QA, STAGE, PRE-PROD, PROD)
+using terraform workspace
+
+
+terraform init -backend-config=dev/backend.tf
+terraform plan -var-file="dev/dev.tfvars"
+terraform apply -var-file="dev/dev.tfvars" 
