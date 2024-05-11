@@ -9,6 +9,13 @@ resource "aws_instance" "this" {
     command = "echo ${self.private_ip} > IP.txt"
   }
 
+  connection {
+    type     = "ssh"
+    user     = "ec2-user"
+    password = "DevOps321"
+    host     = self.public_ip
+  }
+
   provisioner "local-exec" {
     command = "ansible-playbook -i IP.txt web.yml"
   }
