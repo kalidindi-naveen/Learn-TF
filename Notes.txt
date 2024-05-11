@@ -22,3 +22,25 @@ tolist([
 locals and variables are same, referring key value pairs
 locals can hold expressions and use it wherever you want. 
 You can use variables inside locals. but you can't use other variables/locals inside variables
+
+whatever we declared terraform should create
+declared state[terraform files] == actual state[resources inside provider i.e AWS]/Created infra
+
+I ran, terraform created infrastructure
+I run once again, How terraform will understand what infra it is already created?
+  terraform.tfstate is the file that terraform tracks the actual infra
+
+I deleted it manually inside AWS. but it exists in terraform.tfstate
+terraform plan 
+  refresh state (it will check tfstate with aws account)
+  we get -- objects changed outside terraform
+  then it will show resources to create
+
+there should be some locking mechanism, when one person is creating infra. it should be locked until it is completed
+
+step-into-iot.doc, step-into-iot.doc.lock(1kb)
+.lock file -- means someone opened, others are not allowed to edit
+
+Remote state management
+-----------------------
+store state file in s3 bucket, gcs bucket,... etc 
