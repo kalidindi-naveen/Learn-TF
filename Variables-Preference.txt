@@ -1,0 +1,4 @@
+#1. command line
+#2. tfvars
+#3. ENV variable
+#4. variable default value
