@@ -10,6 +10,6 @@ resource "aws_instance" "this" {
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -i IP.txt web.yaml"
+    command = "ansible-playbook -i IP.txt web.yml"
   }
 }
